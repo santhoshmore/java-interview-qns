@@ -1,0 +1,72 @@
+Git Clone Commands:
+------------------- 
+git clone https://github.com/nisumportal/carpool
+
+Git Init:
+------------
+git Init
+
+Git Checkout:
+-------------
+
+git checkout -b branchname --track origin/master
+git checkout branchname
+
+To see branches in local repos:
+-------------------------------
+git branch
+
+
+Remote Repositories adding git:
+-------------------------------
+git remote add remoteName remoteUrL 
+
+
+Git Log Commands 
+--------------------
+git log -5 --oneline(First 5 lines) 
+git log -5
+git reflog (Telling that activity logging here)
+
+Stashing:
+------------
+Stashing nothing but moving your code to temporary area and get back your changes when required.
+
+git stash save msg
+git stash list
+git stash apply stash@{0}(Stash Still Exists in our local after apply)
+git stash clean(Don't use this command until you specifically needs)
+
+Amending commit(Updating commit):
+--------------------------------- 
+git commit --amend -m "msg"(For msg changing)
+git commit --amend (for adding files to commit id)
+
+cherry-pick:(If you want to apply commit ids to another branch use cherry-picks) 
+-------------
+git cherry-pick commitid
+
+
+Git Reset(Don't want commit ids in your local)
+--------
+3 types of reset(soft, mixed, hard)
+git reset --soft commitid (will remove above mentioned commit ids from local and be removed commit ids will be in staged area) 
+git reset commitid
+git reset --hard coomitid (will remove above mentioned commit ids from local and be removed commit ids will be no longer available)
+
+
+Git fetch:(Getting updates from remote)
+-----------
+git fetch origin master
+git merge origin master(after fetch we need to merge remote changes) 
+
+Git Pull:(it is combination of fetch and merge)
+----------
+git pull origin master
+
+Git Push(push to remote)
+-----------------------
+git push origin master
+
+
+
